@@ -1,5 +1,4 @@
 // Education and professional qualifications for the Education page, from my resume.
-// TODO: replace the "[PLACEHOLDER]" entry with any earlier education (or delete it).
 
 export const education = [
   {
@@ -11,13 +10,6 @@ export const education = [
       'GPA: 4.1 / 4.5 (A)',
       'Key courses: Software Systems Design, Java Programming, Advanced Database Concepts (SQL), Software Requirements Engineering, Web Interface Design (JavaScript), Programming 2 (C#), Discrete Mathematics, Functions & Number Systems',
     ],
-  },
-  {
-    id: 'previous-education',
-    credential: '[PLACEHOLDER] Previous diploma, degree or high school',
-    institution: '[PLACEHOLDER] Institution, City',
-    dates: '[PLACEHOLDER] Year – Year',
-    details: [],
   },
 ]
 
