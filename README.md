@@ -2,7 +2,7 @@
 
 Hello. This is my personal portfolio website, built with React for COMP229 (Web Application Development). This website has been built with a mixture of my own information and code, and the good help of Claude (see the AI Use Statement at the bottom if you want to know more.)
 
-- **Live site:** _added after deployment_
+- **Live site:** https://colbysmithcentennialportfolio.netlify.app
 - **Repository:** https://github.com/cs1131412/portfolio
 
 ## Pages

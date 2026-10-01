@@ -110,37 +110,39 @@ Constraints:
   5. Contact page + form + redirect
   6. Styling / responsiveness pass
   7. Documentation + deployment config
-- **VC-3** The site is deployed to a cloud host from the GitHub repo.
+- **VC-3** The site is deployed to a cloud host from the GitHub repo: https://colbysmithcentennialportfolio.netlify.app
 - **VC-4** Deep links work on the live site: refreshing on `/about` does not 404. This needs a Netlify `public/_redirects` file containing `/*  /index.html  200`.
 
 ## 8. Submission Checklist
 - [ ] Zip archive of the project files, **without `node_modules`** (5 marks)
-- [ ] GitHub repository link (5 marks)
-- [ ] Live site link (10 marks)
-- [ ] AI Use Statement (optional, recommended)
+- [x] GitHub repository link (5 marks): https://github.com/cs1131412/portfolio
+- [x] Live site link (10 marks): https://colbysmithcentennialportfolio.netlify.app
+- [x] AI Use Statement (optional, recommended): in README.md
 
 ## 9. Acceptance / Validation Checklist
 
 Verify each item manually on **both** local dev and the live site before submitting.
 
+✅ = verified 2026-10-01 by scripted browser checks (local preview build and live Netlify site, at 1280px, 375px and 320px). ☐ = still to confirm by hand.
+
 | ID(s) | Check | Local | Live |
 |---|---|---|---|
-| NAV-1–4 | Every nav link reaches its page with no reload; active link highlighted | ☐ | ☐ |
-| NAV-5, LAY-2 | Usable at 360px width (DevTools device mode) | ☐ | ☐ |
-| LOGO-1–3 | Logo visible, original, links to Home | ☐ | ☐ |
-| LAY-3 | `/does-not-exist` shows Not Found page | ☐ | ☐ |
-| HOME-1–3 | Welcome, mission statement and CTA button present and working | ☐ | ☐ |
-| ABOUT-1–4 | Name, photo, bio present; resume PDF opens | ☐ | ☐ |
-| PROJ-1–2 | ≥ 3 projects, each with image, role and outcome | ☐ | ☐ |
-| EDU-1–2 | All qualifications listed with dates | ☐ | ☐ |
-| SVC-1–2 | Services listed with images or icons | ☐ | ☐ |
-| CON-1 | Contact info panel shown | ☐ | ☐ |
-| CON-4 | Empty or invalid submit shows errors and stays on page | ☐ | ☐ |
-| CON-5–6 | Valid submit logs data, redirects Home, Home shows "Thanks, {name}" | ☐ | ☐ |
-| AST-1 | No broken images or 404s in the DevTools Network tab | ☐ | ☐ |
-| — | No errors in the browser console | ☐ | ☐ |
-| — | `npm run build` succeeds with no errors | ☐ | n/a |
-| VC-4 | Refreshing on a sub-page works on the live site | n/a | ☐ |
+| NAV-1–4 | Every nav link reaches its page with no reload; active link highlighted | ✅ | ✅ |
+| NAV-5, LAY-2 | Usable at 360px width (DevTools device mode) | ✅ | ✅ |
+| LOGO-1–3 | Logo visible, original, links to Home | ✅ | ✅ |
+| LAY-3 | `/does-not-exist` shows Not Found page | ✅ | ✅ |
+| HOME-1–3 | Welcome, mission statement and CTA button present and working | ✅ | ✅ |
+| ABOUT-1–4 | Name, photo, bio present; resume PDF opens | ✅ | ✅ |
+| PROJ-1–2 | ≥ 3 projects, each with image, role and outcome | ✅ | ✅ |
+| EDU-1–2 | All qualifications listed with dates | ✅ | ✅ |
+| SVC-1–2 | Services listed with images or icons | ✅ | ✅ |
+| CON-1 | Contact info panel shown | ✅ | ✅ |
+| CON-4 | Empty or invalid submit shows errors and stays on page | ✅ | ✅ |
+| CON-5–6 | Valid submit logs data, redirects Home, Home shows "Thanks, {name}" | ✅ | ✅ |
+| AST-1 | No broken images or 404s in the DevTools Network tab | ✅ | ✅ |
+| — | No errors in the browser console | ✅ | ☐ |
+| — | `npm run build` succeeds with no errors | ✅ | n/a |
+| VC-4 | Refreshing on a sub-page works on the live site | n/a | ✅ |
 
 ## 10. Out of Scope
 - Actually sending email or storing messages (no backend, no database).
