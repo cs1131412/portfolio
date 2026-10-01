@@ -25,3 +25,4 @@ dist-ssr
 
 # Personal source files (originals, not for the repo)
 \!PERSONAL/
+\!PYTEMPLATE/

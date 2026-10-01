@@ -11,7 +11,7 @@ export default defineConfig({
     watch: {
       usePolling: true,
       interval: 500,
-      ignored: ['**/!PERSONAL/**', '**/dist/**'],
+      ignored: ['**/!PERSONAL/**', '**/!PYTEMPLATE/**', '**/dist/**'],
     },
   },
 })

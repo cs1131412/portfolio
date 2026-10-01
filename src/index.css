@@ -45,6 +45,11 @@
   box-sizing: border-box;
 }
 
+/* Always reserve scrollbar space so the layout doesn't shift between short and long pages */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   background: var(--color-bg);
@@ -59,6 +64,13 @@ h3 {
 
 a {
   color: var(--color-accent);
+}
+
+/* Visible outline when navigating with the keyboard */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 img {
@@ -85,15 +97,21 @@ img {
 
 /* ---------- Header & navigation ---------- */
 
+/* Full-width bar; .header-inner lines the logo and links up with the page content */
 .site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.header-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem 1.5rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--color-border);
-  background: var(--color-surface);
 }
 
 .brand {
@@ -260,11 +278,17 @@ img {
 /* As many columns as fit, each at least 280px wide */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* min() stops a column being wider than very small screens */
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0 0;
   padding: 0;
   list-style: none;
+}
+
+/* Wider minimum so the four projects sit in a 2 x 2 grid on desktop */
+.project-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr));
 }
 
 .card {
@@ -369,7 +393,6 @@ img {
   margin: 0;
   color: var(--color-accent);
   font-weight: 600;
-  white-space: nowrap;
 }
 
 .qualification-institution {
@@ -387,7 +410,7 @@ img {
 /* Info panel beside the form on wide screens, stacked on narrow ones */
 .contact-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 2rem;
   align-items: start;
   margin-top: 1.5rem;
@@ -505,7 +528,7 @@ img {
 /* ---------- Small screens ---------- */
 
 @media (max-width: 600px) {
-  .site-header {
+  .header-inner {
     justify-content: center;
   }
 

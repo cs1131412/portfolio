@@ -16,23 +16,25 @@ const navigationLinks = [
 function NavBar() {
   return (
     <header className="site-header">
-      <Link to="/" className="brand" aria-label="Colby Smith — Home">
-        <Logo />
-        <span className="brand-name">Colby Smith</span>
-      </Link>
+      <div className="header-inner">
+        <Link to="/" className="brand" aria-label="Colby Smith — Home">
+          <Logo />
+          <span className="brand-name">Colby Smith</span>
+        </Link>
 
-      <nav aria-label="Main navigation">
-        <ul className="nav-links">
-          {navigationLinks.map((link) => (
-            <li key={link.path}>
-              {/* "end" stops Home ("/") from matching every page as active */}
-              <NavLink to={link.path} end={link.path === '/'}>
-                {link.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav aria-label="Main navigation">
+          <ul className="nav-links">
+            {navigationLinks.map((link) => (
+              <li key={link.path}>
+                {/* "end" stops Home ("/") from matching every page as active */}
+                <NavLink to={link.path} end={link.path === '/'}>
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }

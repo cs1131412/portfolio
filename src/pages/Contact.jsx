@@ -16,7 +16,10 @@ function Contact() {
           <dl className="contact-details">
             <dt>Email</dt>
             <dd>
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              {/* <wbr> lets a long address wrap neatly after the @ */}
+              <a href={`mailto:${contact.email}`}>
+                {contact.email.split('@')[0]}@<wbr />{contact.email.split('@')[1]}
+              </a>
             </dd>
 
             <dt>LinkedIn</dt>

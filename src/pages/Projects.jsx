@@ -8,7 +8,7 @@ function Projects() {
       <h1>Projects</h1>
       <p className="page-intro">A selection of work and academic projects I&apos;ve contributed to.</p>
 
-      <div className="card-grid">
+      <div className="card-grid project-grid">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
