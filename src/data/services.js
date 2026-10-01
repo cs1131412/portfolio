@@ -1,6 +1,4 @@
 // Services listed on the Services page, based on the skills on my resume.
-// TODO: review this list — keep only services I'm comfortable offering, and
-// replace "[PLACEHOLDER]" text.
 import webDevelopmentIcon from '../assets/services/web-development.svg'
 import databaseDesignIcon from '../assets/services/database-design.svg'
 import dataAnalyticsIcon from '../assets/services/data-analytics.svg'
@@ -13,7 +11,7 @@ const services = [
     title: 'Web Development',
     icon: webDevelopmentIcon,
     description:
-      'Responsive websites and front-end interfaces built with HTML, CSS, JavaScript and React. [PLACEHOLDER: adjust to what you offer]',
+      'Responsive websites and front-end interfaces built with HTML, CSS, JavaScript and React. Like this one here!',
   },
   {
     id: 'database-design',
