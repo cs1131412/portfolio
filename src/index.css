@@ -10,6 +10,9 @@
   --color-border: #e3e6eb;
   --color-accent: #1f6feb;
   --color-accent-text: #ffffff;
+  --color-error: #c62828;
+  --color-success: #2e8b57;
+  --color-success-bg: #e8f5ee;
 
   --font-body: system-ui, 'Segoe UI', Roboto, sans-serif;
   --content-width: 1000px;
@@ -30,6 +33,9 @@
     --color-border: #2c303a;
     --color-accent: #5b9dff;
     --color-accent-text: #0b1220;
+    --color-error: #ff8a80;
+    --color-success: #4cc38a;
+    --color-success-bg: #13261d;
   }
 }
 
@@ -376,7 +382,116 @@ img {
   padding-left: 1.2rem;
 }
 
+/* ---------- Contact ---------- */
+
+/* Info panel beside the form on wide screens, stacked on narrow ones */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.contact-panel h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.contact-details {
+  margin: 0;
+}
+
+.contact-details dt {
+  margin-top: 0.9rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.contact-details dd {
+  margin: 0.1rem 0 0;
+  overflow-wrap: anywhere; /* long email addresses wrap instead of overflowing */
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.form-field [aria-invalid='true'] {
+  border-color: var(--color-error);
+}
+
+.field-error {
+  margin: 0.3rem 0 0;
+  color: var(--color-error);
+  font-size: 0.9rem;
+}
+
+.form-note {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.contact-form .button {
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Thank-you banner shown on Home after the contact form is submitted */
+.confirmation {
+  margin-bottom: 1rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid var(--color-success);
+  border-radius: 8px;
+  background: var(--color-success-bg);
+  color: var(--color-heading);
+}
+
 @media (max-width: 700px) {
+  .contact-layout,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
   .about {
     grid-template-columns: 1fr;
     gap: 1.5rem;

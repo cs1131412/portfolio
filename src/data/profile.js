@@ -21,6 +21,14 @@ const profile = {
 
   // Served from the public/ folder, so the path is from the site root.
   resumeUrl: '/resume.pdf',
+
+  // Shown publicly on the Contact page. Phone number deliberately left out.
+  contact: {
+    email: 'csmit253@my.centennialcollege.ca',
+    linkedInUrl: 'https://www.linkedin.com/in/colby-smith-2b2980206/',
+    location: 'Ontario, Canada',
+    availability: '[PLACEHOLDER] e.g. Open to co-op placements and freelance projects',
+  },
 }
 
 export default profile
